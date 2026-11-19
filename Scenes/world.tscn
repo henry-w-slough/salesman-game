@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bwgn5dw0bynts"]
+
+[ext_resource type="Script" uid="uid://fdo1jnkj5mp6" path="res://Scripts/scene_manager.gd" id="1_a02cp"]
+[ext_resource type="Script" uid="uid://d1r1edhaj5mlr" path="res://Scripts/scene.gd" id="2_go701"]
+[ext_resource type="Texture2D" uid="uid://cgn2wufwcj5r0" path="res://icon.svg" id="3_5a7ea"]
+
+[sub_resource type="Resource" id="Resource_723ri"]
+script = ExtResource("2_go701")
+camera_paths = Dictionary[String, NodePath]({
+"Willy": NodePath("../2")
+})
+metadata/_custom_type_script = "uid://d1r1edhaj5mlr"
+
+[node name="World" type="Node2D" unique_id=595866333]
+
+[node name="SceneManager" type="Node" parent="." unique_id=1825259718]
+script = ExtResource("1_a02cp")
+scenes = Array[ExtResource("2_go701")]([SubResource("Resource_723ri")])
+
+[node name="1" type="Camera2D" parent="." unique_id=1820863859]
+position = Vector2(-290, 6)
+
+[node name="2" type="Camera2D" parent="." unique_id=1042428327]
+position = Vector2(1126, 31)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=763873698]
+position = Vector2(1238, -7)
+texture = ExtResource("3_5a7ea")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1379918448]
+position = Vector2(654, -34)
+texture = ExtResource("3_5a7ea")
+
+[node name="Icon3" type="Sprite2D" parent="." unique_id=572284760]
+position = Vector2(-375, -11)
+texture = ExtResource("3_5a7ea")
