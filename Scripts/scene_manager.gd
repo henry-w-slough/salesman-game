@@ -11,6 +11,4 @@ func _ready() -> void:
         scene.initialize(self)
 
 
-func _process(_delta: float) -> void:
-    
-    scenes[0].enable_camera("Willy")
+

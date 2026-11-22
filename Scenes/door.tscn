@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dppfthy2mtdgc"]
+
+[ext_resource type="Shader" uid="uid://b0th8b3jqrnb4" path="res://Assets/outline.gdshader" id="1_fahql"]
+[ext_resource type="Script" uid="uid://bu546u2gknhew" path="res://Scripts/door.gd" id="1_p0e35"]
+[ext_resource type="Texture2D" uid="uid://doi6ruq76pbhw" path="res://Assets/doors_stairs_tileset.png" id="1_w6aom"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o06y3"]
+shader = ExtResource("1_fahql")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/number_of_images = Vector2(1, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0e35"]
+atlas = ExtResource("1_w6aom")
+region = Rect2(128, 0, 32, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_in6rm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0e35")
+}],
+"loop": 1,
+"name": &"closed",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6aom"]
+size = Vector2(25.5, 46)
+
+[node name="Door" type="CharacterBody2D" unique_id=1781341768]
+material = SubResource("ShaderMaterial_o06y3")
+collision_layer = 524288
+collision_mask = 0
+input_pickable = true
+script = ExtResource("1_p0e35")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=292066321]
+sprite_frames = SubResource("SpriteFrames_in6rm")
+animation = &"closed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2101019511]
+position = Vector2(0.25, 0)
+shape = SubResource("RectangleShape2D_w6aom")
