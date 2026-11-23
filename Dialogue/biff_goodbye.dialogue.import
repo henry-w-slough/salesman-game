@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://c8dhmyadgjl30"
+path="res://.godot/imported/biff_goodbye.dialogue-8432c50944e9c47c06d096aa6716c6da.tres"
+
+[deps]
+
+source_file="res://Dialogue/biff_goodbye.dialogue"
+dest_files=["res://.godot/imported/biff_goodbye.dialogue-8432c50944e9c47c06d096aa6716c6da.tres"]
+
+[params]
+
+defaults=true

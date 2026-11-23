@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://bmrbsdju8fyxw"]
+
+[ext_resource type="Script" uid="uid://dbragjet0cecc" path="res://Scripts/npc.gd" id="1_c4a10"]
+[ext_resource type="Texture2D" uid="uid://b6s6df77ey8ht" path="res://Assets/linda.png" id="2_ogie3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4a10"]
+atlas = ExtResource("2_ogie3")
+region = Rect2(128, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6q48s"]
+atlas = ExtResource("2_ogie3")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_760ym"]
+atlas = ExtResource("2_ogie3")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtsxa"]
+atlas = ExtResource("2_ogie3")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmdwy"]
+atlas = ExtResource("2_ogie3")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hhaf"]
+atlas = ExtResource("2_ogie3")
+region = Rect2(64, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5eh56"]
+atlas = ExtResource("2_ogie3")
+region = Rect2(80, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klgy3"]
+atlas = ExtResource("2_ogie3")
+region = Rect2(96, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcexk"]
+atlas = ExtResource("2_ogie3")
+region = Rect2(112, 0, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gblqm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4a10")
+}],
+"loop": 1,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6q48s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_760ym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtsxa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmdwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hhaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5eh56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klgy3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcexk")
+}],
+"loop": 1,
+"name": &"walk_right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gblqm"]
+size = Vector2(8, 14)
+
+[node name="Linda" type="CharacterBody2D" unique_id=2100075783]
+collision_layer = 2
+script = ExtResource("1_c4a10")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1490743618]
+sprite_frames = SubResource("SpriteFrames_gblqm")
+animation = &"idle_right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=272015371]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_gblqm")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1317334984]

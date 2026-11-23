@@ -66,9 +66,11 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_in6rm"]
-size = Vector2(10, 15)
+size = Vector2(10, 8)
 
-[node name="Willy" type="CharacterBody2D" unique_id=1101535388]
+[node name="Player" type="CharacterBody2D" unique_id=1101535388]
+collision_layer = 3
+collision_mask = 1
 script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=380502332]
@@ -77,5 +79,7 @@ animation = &"walk_right"
 frame_progress = 0.8264362
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=624332420]
-position = Vector2(0, 3.5)
+position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_in6rm")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1787857456]

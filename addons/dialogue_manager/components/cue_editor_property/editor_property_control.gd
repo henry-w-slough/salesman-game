@@ -9,7 +9,7 @@ signal cue_changed(next_cue: String)
 const CUE_ICON: Texture2D = preload("uid://d1aawtj2vsnxx")
 
 
-var actionable: Node = null
+var actionable: Object = null
 var cue: String = "":
 	set(value):
 		cue = value
@@ -119,7 +119,12 @@ func _on_link_button_pressed() -> void:
 	match link_action:
 		"create":
 			if cue.is_empty():
-				cue_name_edit.text = actionable.name.to_snake_case()
+				var suggested_name: String = "new_cue"
+				if actionable is Node:
+					suggested_name = actionable.name
+				elif actionable is Resource and not actionable.resource_name.is_empty():
+					suggested_name = actionable.resource_name
+				cue_name_edit.text = suggested_name.to_snake_case()
 			else:
 				cue_name_edit.text = cue
 			cue_name_label.text = DMConstants.translate("Cue:")

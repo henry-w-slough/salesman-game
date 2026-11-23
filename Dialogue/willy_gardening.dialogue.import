@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://dmwxd8ifmg6wf"
+path="res://.godot/imported/willy_gardening.dialogue-57bff3a5e43701488502ddacd03ab19f.tres"
+
+[deps]
+
+source_file="res://Dialogue/willy_gardening.dialogue"
+dest_files=["res://.godot/imported/willy_gardening.dialogue-57bff3a5e43701488502ddacd03ab19f.tres"]
+
+[params]
+
+defaults=true

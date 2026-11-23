@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://gq8x8psbbhx0"]
+
+[ext_resource type="Texture2D" uid="uid://bsx4agrwxwmsy" path="res://Assets/football.png" id="1_dceio"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gblqm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dceio")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gblqm"]
+radius = 5.0
+height = 16.0
+
+[node name="Football" type="Node2D" unique_id=1258510655]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=201508305]
+sprite_frames = SubResource("SpriteFrames_gblqm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2099574493]
+position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_gblqm")

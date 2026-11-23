@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://uyet11f08csd"]
+
+[ext_resource type="Texture2D" uid="uid://i5esfr6ld1g7" path="res://Assets/galaxy.png" id="1_0ll74"]
+
+[node name="Space" type="Node2D" unique_id=567470185]
+
+[node name="Galaxy" type="Sprite2D" parent="." unique_id=1981755809]
+position = Vector2(252, 127)
+texture = ExtResource("1_0ll74")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=757467587]
+position = Vector2(252, 100)
+zoom = Vector2(2, 2)

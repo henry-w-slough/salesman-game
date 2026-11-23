@@ -3,27 +3,23 @@ class_name Door extends CharacterBody2D
 
 @export_file("*.tscn") var destination_scene: String = ""
 
-var _is_mouse_over: bool = false
+
+func _ready() -> void:
+	var enter_house: Node = get_tree().current_scene.find_child("EnterHouse", true, false)
+	if enter_house is EnterHouse:
+		enter_house.enter_house.connect(_on_enter_house)
+	else:
+		$EnterArea.body_entered.connect(_on_body_entered)
 
 
-func _ready():
-
-	mouse_entered.connect(_on_mouse_entered)
-	mouse_exited.connect(_on_mouse_exited)
-	
-
-func _process(_delta: float) -> void:
-
-	if not _is_mouse_over:
-		return
-
-	if Input.is_action_just_pressed("interact"):
-		get_tree().change_scene_to_file(destination_scene)
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("players"):
+		_change_scene()
 
 
-func _on_mouse_entered():
-	_is_mouse_over = true
+func _on_enter_house() -> void:
+	_change_scene()
 
 
-func _on_mouse_exited():
-	_is_mouse_over = false
+func _change_scene() -> void:
+	SceneTransition.change_scene(destination_scene)
