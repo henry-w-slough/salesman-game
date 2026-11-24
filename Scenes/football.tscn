@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://gq8x8psbbhx0"]
 
 [ext_resource type="Texture2D" uid="uid://bsx4agrwxwmsy" path="res://Assets/football.png" id="1_dceio"]
+[ext_resource type="Script" uid="uid://b6nib807ujk3v" path="res://Scripts/object.gd" id="1_of2ed"]
+[ext_resource type="Resource" uid="uid://kpjtjjvu830v" path="res://Dialogue/football.dialogue" id="2_j3oby"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gblqm"]
 animations = [{
@@ -17,7 +19,11 @@ animations = [{
 radius = 5.0
 height = 16.0
 
-[node name="Football" type="Node2D" unique_id=1258510655]
+[node name="Football" type="CharacterBody2D" unique_id=1748523361]
+input_pickable = true
+script = ExtResource("1_of2ed")
+dialogue_resource = ExtResource("2_j3oby")
+dialogue_cue = "start"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=201508305]
 sprite_frames = SubResource("SpriteFrames_gblqm")

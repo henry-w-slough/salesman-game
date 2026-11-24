@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://kpjtjjvu830v"
+path="res://.godot/imported/football.dialogue-1c00c1d2ab9ae553569003e874dc5552.tres"
+
+[deps]
+
+source_file="res://Dialogue/football.dialogue"
+dest_files=["res://.godot/imported/football.dialogue-1c00c1d2ab9ae553569003e874dc5552.tres"]
+
+[params]
+
+defaults=true

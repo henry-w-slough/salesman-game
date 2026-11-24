@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 DialogueManager="*uid://c3rodes2l3gxb"
 SceneTransition="*res://Scripts/scene_transition.gd"
+Music="*uid://brbgf2k46lh1p"
 
 [dialogue_manager]
 
@@ -26,8 +27,9 @@ runtime/balloon_path="res://Dialogue/balloon.tscn"
 
 [display]
 
-window/size/viewport_width=1000
-window/size/viewport_height=800
+window/size/viewport_width=2000
+window/size/viewport_height=1000
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -69,7 +71,7 @@ interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogue/willy_gardening.dialogue", "res://Dialogue/biff_goodbye.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogue/willy_gardening.dialogue", "res://Dialogue/biff_goodbye.dialogue", "res://Dialogue/analysis1.dialogue", "res://Dialogue/spite_argument.dialogue", "res://Dialogue/ben_willy_inside.dialogue", "res://Dialogue/willy_outside_dialogue_first.dialogue", "res://Dialogue/willy_outside_second.dialogue", "res://Dialogue/analysis2.dialogue", "res://Dialogue/willy_outside_second.dialogue", "res://Dialogue/analysis2.dialogue", "res://Dialogue/willy_outside_dialogue_first.dialogue", "res://willy_outside_dialogue_first.dialogue", "res://willy_outside_second.dialogue", "res://analysis2.dialogue", "res://Dialogue/fridge.dialogue", "res://Dialogue/football.dialogue", "res://Dialogue/award.dialogue")
 
 [physics]
 

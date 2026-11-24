@@ -107,9 +107,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gblqm"]
-size = Vector2(14, 23)
-
 [node name="Ben" type="CharacterBody2D" unique_id=585095567]
 script = ExtResource("1_kk8l8")
 
@@ -117,9 +114,5 @@ script = ExtResource("1_kk8l8")
 self_modulate = Color(1, 1, 1, 0.6117647)
 sprite_frames = SubResource("SpriteFrames_gblqm")
 animation = &"idle_right"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=518657301]
-position = Vector2(0, 0.5)
-shape = SubResource("RectangleShape2D_gblqm")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=269121651]

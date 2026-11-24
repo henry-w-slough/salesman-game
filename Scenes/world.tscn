@@ -14,6 +14,7 @@
 [ext_resource type="Resource" uid="uid://dmwxd8ifmg6wf" path="res://Dialogue/willy_gardening.dialogue" id="10_0fj1v"]
 [ext_resource type="Texture2D" uid="uid://i5esfr6ld1g7" path="res://Assets/galaxy.png" id="11_ikia7"]
 [ext_resource type="Resource" uid="uid://c8dhmyadgjl30" path="res://Dialogue/biff_goodbye.dialogue" id="13_c5t2i"]
+[ext_resource type="Resource" uid="uid://bd3jjg81m1vj0" path="res://Dialogue/analysis1.dialogue" id="14_kn0ld"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_gblqm"]
 vertices = PackedVector2Array(182.67969, 134.22656, 182.03906, 86.859375, 329.14063, 86.859375, 310.85938, 135.24219, 329.14063, 217.14063, 310.85938, 180.85938, 182.85938, 217.14063, 211.14063, 180.85938, 182.85938, 166.85938, 211.14063, 166.85938)
@@ -1627,8 +1628,6 @@ script = ExtResource("2_go701")
 start_immediately = true
 dialogue_resource = ExtResource("10_0fj1v")
 dialogue_cue = "start"
-post_scene_signal_target_path = NodePath("../HouseFront")
-post_scene_signal_name = &"door_opened"
 metadata/_custom_type_script = "uid://d1r1edhaj5mlr"
 
 [sub_resource type="Resource" id="Resource_7yui6"]
@@ -1651,6 +1650,14 @@ script = ExtResource("2_go701")
 character_path = NodePath("../Environment/Player")
 move_character_to_position = true
 character_move_position_path = NodePath("../HouseFront")
+metadata/_custom_type_script = "uid://d1r1edhaj5mlr"
+
+[sub_resource type="Resource" id="Resource_e0ngr"]
+script = ExtResource("2_go701")
+camera_path = NodePath("../Cams/GalaxyCam")
+should_transition = true
+dialogue_resource = ExtResource("14_kn0ld")
+dialogue_cue = "start"
 post_scene_signal_target_path = NodePath("../EnterHouse")
 post_scene_signal_name = &"enter_house"
 metadata/_custom_type_script = "uid://d1r1edhaj5mlr"
@@ -1707,17 +1714,19 @@ collision_mask = 0
 
 [node name="SceneManager" type="Node" parent="." unique_id=1825259718]
 script = ExtResource("1_a02cp")
-scenes = Array[ExtResource("2_go701")]([SubResource("Resource_ikia7"), SubResource("Resource_7yui6"), SubResource("Resource_c5t2i"), SubResource("Resource_fahql")])
+scenes = Array[ExtResource("2_go701")]([SubResource("Resource_ikia7"), SubResource("Resource_7yui6"), SubResource("Resource_c5t2i"), SubResource("Resource_fahql"), SubResource("Resource_e0ngr")])
 
 [node name="Cams" type="Node" parent="." unique_id=862752732]
 
 [node name="HouseCam" type="Camera2D" parent="Cams" unique_id=484214698]
 position = Vector2(258, 149)
-zoom = Vector2(4, 4)
+zoom = Vector2(5, 5)
 
 [node name="GalaxyCam" type="Camera2D" parent="Cams" unique_id=472662822]
-position = Vector2(1075, 151)
-zoom = Vector2(1.5, 1.5)
+position = Vector2(1075, 130)
+zoom = Vector2(3, 3)
+editor_draw_limits = true
+editor_draw_drag_margin = true
 
 [node name="Node2D" type="Node2D" parent="Cams" unique_id=1831632109]
 

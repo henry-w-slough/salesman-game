@@ -88,7 +88,8 @@ func start() -> bool:
 		dialogue_manager.show_dialogue_balloon(resource, dialogue_cue, [_character, _context])
 		return true
 
-	push_error("Scene has no dialogue resource.")
+	push_warning("Scene has no dialogue resource.")
+	
 	return false
 
 

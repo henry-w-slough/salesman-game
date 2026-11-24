@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://wplmjp45f8ep"]
+
+[ext_resource type="Texture2D" uid="uid://buef5vycghjls" path="res://Assets/award.png" id="1_lse85"]
+[ext_resource type="Script" uid="uid://b6nib807ujk3v" path="res://Scripts/object.gd" id="1_scqwn"]
+[ext_resource type="Resource" uid="uid://0bcemfn1gtp5" path="res://Dialogue/award.dialogue" id="2_m5e6t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scqwn"]
+atlas = ExtResource("1_lse85")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_in6rm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scqwn")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_in6rm"]
+size = Vector2(26, 30)
+
+[node name="Award" type="CharacterBody2D" unique_id=1147068599]
+input_pickable = true
+script = ExtResource("1_scqwn")
+dialogue_resource = ExtResource("2_m5e6t")
+dialogue_cue = "start"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=446638908]
+sprite_frames = SubResource("SpriteFrames_in6rm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1028626872]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_in6rm")

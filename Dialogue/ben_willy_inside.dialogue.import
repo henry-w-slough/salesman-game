@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://byla44c5vfee3"
+path="res://.godot/imported/ben_willy_inside.dialogue-32e646d6247a12a2649deebcb3b0c98e.tres"
+
+[deps]
+
+source_file="res://Dialogue/ben_willy_inside.dialogue"
+dest_files=["res://.godot/imported/ben_willy_inside.dialogue-32e646d6247a12a2649deebcb3b0c98e.tres"]
+
+[params]
+
+defaults=true

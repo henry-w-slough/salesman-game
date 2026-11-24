@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://0bcemfn1gtp5"
+path="res://.godot/imported/award.dialogue-565ac8a820080a8f38e1c2f1f962be99.tres"
+
+[deps]
+
+source_file="res://Dialogue/award.dialogue"
+dest_files=["res://.godot/imported/award.dialogue-565ac8a820080a8f38e1c2f1f962be99.tres"]
+
+[params]
+
+defaults=true

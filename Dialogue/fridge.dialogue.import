@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://d2nacrc0r8rog"
+path="res://.godot/imported/fridge.dialogue-ff10302a5c912629e90d70cd8c8db9dd.tres"
+
+[deps]
+
+source_file="res://Dialogue/fridge.dialogue"
+dest_files=["res://.godot/imported/fridge.dialogue-ff10302a5c912629e90d70cd8c8db9dd.tres"]
+
+[params]
+
+defaults=true

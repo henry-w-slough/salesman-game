@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://cmgivjrcqt68"
+path="res://.godot/imported/analysis2.dialogue-61723dfc1843203561fc8ce3bfe23509.tres"
+
+[deps]
+
+source_file="res://Dialogue/analysis2.dialogue"
+dest_files=["res://.godot/imported/analysis2.dialogue-61723dfc1843203561fc8ce3bfe23509.tres"]
+
+[params]
+
+defaults=true

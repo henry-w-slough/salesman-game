@@ -13,7 +13,7 @@ func _on_body_entered(body: Node2D) -> void:
 	#opaqueness on overlapping player 
 	if body.name == "Player":
 		var tween = create_tween()
-		tween.tween_property(self, "modulate:a", 0.0, 0.25)
+		tween.tween_property(self, "modulate:a", 0.2, 0.25)
 
 
 func _on_body_exited(body: Node2D) -> void:

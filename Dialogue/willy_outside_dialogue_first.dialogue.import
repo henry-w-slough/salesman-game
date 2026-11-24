@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://l26w6j8jgo8a"
+path="res://.godot/imported/willy_outside_dialogue_first.dialogue-aaa3504dedd00245ee2e45a49af0f6af.tres"
+
+[deps]
+
+source_file="res://Dialogue/willy_outside_dialogue_first.dialogue"
+dest_files=["res://.godot/imported/willy_outside_dialogue_first.dialogue-aaa3504dedd00245ee2e45a49af0f6af.tres"]
+
+[params]
+
+defaults=true

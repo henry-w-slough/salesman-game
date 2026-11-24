@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://clvt62y0e856b"
+path="res://.godot/imported/spite_argument.dialogue-b43dfbd831e20e10de9ee606c788c705.tres"
+
+[deps]
+
+source_file="res://Dialogue/spite_argument.dialogue"
+dest_files=["res://.godot/imported/spite_argument.dialogue-b43dfbd831e20e10de9ee606c788c705.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://djswmduunurpa"
+path="res://.godot/imported/willy_outside_second.dialogue-81fa52e8621b0e733c0973d822e4a5eb.tres"
+
+[deps]
+
+source_file="res://Dialogue/willy_outside_second.dialogue"
+dest_files=["res://.godot/imported/willy_outside_second.dialogue-81fa52e8621b0e733c0973d822e4a5eb.tres"]
+
+[params]
+
+defaults=true
